@@ -16,7 +16,7 @@ passwrd = getpass()
 client = fbchat.Client(username, passwrd)
 
 #Getting recipient
-name = str(raw_input("Username of your bae: "))
+name = str(input("Username of your bae: "))
 friends = client.searchForUsers(name)
 bae = friends[0]
 
