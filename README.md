@@ -33,7 +33,7 @@ Please note that every time you restart your device, you will have to re run the
 
 # How to run
 Simply ```cd RomanceBreaker``` and ```python RomanceBreaker.py```  
-For *Android* users: you will also need to press ```"ACQUIRE WAKELOCK"``` in the Termux notification
+For *Android* users: you will also need to press ```"ACQUIRE WAKELOCK"``` in the Termux notification to enable the script to run in the background without the process being killed
 
 ---
 
