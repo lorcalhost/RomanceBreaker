@@ -56,7 +56,7 @@ def newRandTime():
 newRandTime()
 
 while True:
-    if datetime.datetime.today().hour == randTimeHour and datetime.datetime.today().minute == randTimeMinute:
+    if int(datetime.datetime.today().hour) == randTimeHour and int(datetime.datetime.today().minute) == randTimeMinute:
         morningMessage()
         newRandTime()
     time.sleep(60) #Wait one minute to check if it's #morningtime
