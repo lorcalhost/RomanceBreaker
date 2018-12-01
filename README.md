@@ -49,9 +49,9 @@ We just need to edit it like this:
 9 customMsgs = ["Good morning beautiful", "I'm too lazy", "To write messages on my own", "NewCustomMessage"]
 ```
 ## Custom time setup
-To change the time at which the #MorningText should be sent just change line 11:
+To change the time at which the #MorningText should be sent just change line 11 with your custom interval:
 ```python
-11 customTime = "4:20"
+customTimeInterval = ["04:20", "16:20"]
 ```
 
 
