@@ -1,5 +1,5 @@
 # Romance Breaker
-##### "Is your girlfriend/boyfriend complaining that you wake up too late every morning or that you are not romantic enough but you're to lazy to change? I have a solution."
+##### "Is your girlfriend/boyfriend complaining that you wake up too late every morning or that you are not romantic enough but of course you're too lazy to change? I have a solution for you."
 
 Romance Breaker is small python script which sends a custom morning message from a list to your significant other every morning at a given time on Facebook Messenger, now doesn't this sound great already?
 
