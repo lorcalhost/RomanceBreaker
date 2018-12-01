@@ -50,7 +50,7 @@ def newRandTime():
         randTimeMinute = random.randint(int(customTimeInterval[1][3:5]), 59)
     else:
         randTimeMinute = random.randint(0, 59)
-    
+    print("I'll send a message at " + str(randTimeHour) + ":" + str(randTimeMinute) + "...")
     return
 
 newRandTime()
