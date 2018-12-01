@@ -25,7 +25,6 @@ bae = friends[0]
 
 def morningMessage():
     #Sending message
-    print("PASSED HERE")
     msg = random.choice(customMsgs)
     global client
     global bae
