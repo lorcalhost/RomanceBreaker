@@ -12,7 +12,8 @@ customTime = "4:20"
 
 #Getting username & pwd
 username = str(raw_input("Username: "))
-client = fbchat.Client(username, getpass())
+passwrd = getpass()
+client = fbchat.Client(username, passwrd)
 
 #Getting recipient
 name = str(raw_input("Name: "))
@@ -20,12 +21,14 @@ friends = client.searchForUsers(name)
 friend = friends[0]
 
 def morningMessage():
-    #Finally sending
-    print("DONE")
+    #Sending message
     msg = random.choice(customMsgs)
     sent = client.send(Message(msg), thread_id=friend.uid, thread_type=ThreadType.USER)
     if sent:
         print("Message '" + msg + "' sent successfully!")
+    else:
+        client = fbchat.Client(username, passwrd)
+        morningMessage()
     return
 
 schedule.every().day.at(customTime).do(morningMessage)
