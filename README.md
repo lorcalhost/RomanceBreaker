@@ -44,6 +44,9 @@ For *Android* users: you will also need to press ```"ACQUIRE WAKELOCK"``` in the
 ---
 
 ## Custom messages setup
+###### Android Users
+Android users may want to edit the file with their preferred text editing app as the file will be in the Downloads folder of their devices  
+  
 I guess you also want to send custom messages, so here we go:. 
 On line 9 replace the messages in between ```" "``` with your own custom messages, you can also add more than three by adding after the ```"``` of the last message a comma and a new message, always in between ```" "```s. 
 If we want to add ```NewCustomMessage``` to the list below. 
