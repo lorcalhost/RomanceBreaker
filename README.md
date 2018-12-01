@@ -20,7 +20,8 @@ sudo pip install fbchat bs4 schedule
 ```
 Also don't forget to ```git clone https://github.com/lorcalhost/RomanceBreaker.git```
 
-# Installation on Android
+# Installation on Android 
+As it was highly requested by the plebs without a raspberry pi:
 First download and install [Termux from the Google Play Store](https://play.google.com/store/apps/details?id=com.termux)  
 Then run the following commands:   
 ```sh
