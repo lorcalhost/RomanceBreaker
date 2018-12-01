@@ -24,7 +24,9 @@ Also don't forget to ```git clone https://github.com/lorcalhost/RomanceBreaker.g
 As it was highly requested by the plebs without a raspberry pi:
 First download and install [Termux from the Google Play Store](https://play.google.com/store/apps/details?id=com.termux)  
 Then run the following commands:   
+```termux-setup-storage``` and allow storage access  
 ```sh
+cd storage/downloads 
 pkg install python2 git
 pip2 install fbchat requests bs4 enum
 git clone https://github.com/lorcalhost/RomanceBreaker.git
@@ -32,7 +34,11 @@ git clone https://github.com/lorcalhost/RomanceBreaker.git
 Please note that every time you restart your device, you will have to re run the commands in the *How to run* section
 
 # How to run
-Simply ```cd RomanceBreaker``` and ```python RomanceBreaker.py```(on Android use ```python2 RomanceBreaker.py```)  
+###### Linux:
+Simply ```cd RomanceBreaker``` and ```python RomanceBreaker.py```  
+###### Android:
+Simply ```cd storage/downloads/RomanceBreaker``` and ```python2 RomanceBreaker.py```  
+
 For *Android* users: you will also need to press ```"ACQUIRE WAKELOCK"``` in the Termux notification to enable the script to run in the background without the process being killed
 
 ---
