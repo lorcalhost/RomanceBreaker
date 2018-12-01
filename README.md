@@ -6,7 +6,7 @@ Romance Breaker is small python script which sends a custom morning message from
 ### Most loved features:
   - You can still be lazy
   - You can still wake up late
-  - Relationship improvement (I don't take any responsibility if Romance Breaker doesn't improve relationship status)
+  - Relationship improvement (I don't take any responsibility if Romance Breaker® doesn't improve relationship status)
   - Magic
 
 ---
