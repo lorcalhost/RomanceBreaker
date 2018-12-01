@@ -9,6 +9,8 @@ Romance Breaker is small python script which sends a custom morning message from
   - Relationship improvement (I don't take any responsibility if Romance Breaker doesn't improve relationship status)
   - Magic
 
+---
+
 # Installation
 
 Romance breaker relies on a few things, here is what to do to get them:
@@ -16,6 +18,13 @@ Romance breaker relies on a few things, here is what to do to get them:
 sudo apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev
 sudo pip install fbchat bs4 schedule
 ```
+Also don't forget to ```git clone https://github.com/lorcalhost/RomanceBreaker.git```
+
+# How to run
+Simply ```cd RomanceBreaker``` and ```python3 RomanceBreaker.py```
+
+---
+
 ## Custom messages setup
 I guess you also want to send custom messages, so here we go:
 On line 9 replace the messages in between ```" "``` with your own custom messages, you can also add more than three by adding after the ```"``` of the last message a comma and a new message, always in between ```" "```s
@@ -32,6 +41,10 @@ To change the time at which the #MorningText should be sent just change line 11:
 ```python
 11 customTime = "4:20"
 ```
+
+
+---
+
 ## Comments of people who are enjoying the effects of Romance Breaker:  
   
 > My life has never been so great,  
