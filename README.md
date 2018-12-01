@@ -11,7 +11,7 @@ Romance Breaker is a small python script which sends a custom morning message fr
 
 ---
 
-# Installation
+# Installation on linux
 
 Romance breaker relies on a few things, here is what to do to get them:
 ```sh
@@ -20,8 +20,19 @@ sudo pip install fbchat bs4 schedule
 ```
 Also don't forget to ```git clone https://github.com/lorcalhost/RomanceBreaker.git```
 
+# Installation on Android
+First download and install [Termux from the Google Play Store](https://play.google.com/store/apps/details?id=com.termux)  
+Then run the following commands:   
+```sh
+pkg install python git
+pip install fbchat schedule
+git clone https://github.com/lorcalhost/RomanceBreaker.git
+```
+Please note that every time you restart your device, you will have to re run the commands in the *How to run* section
+
 # How to run
-Simply ```cd RomanceBreaker``` and ```python3 RomanceBreaker.py```
+Simply ```cd RomanceBreaker``` and ```python RomanceBreaker.py```  
+For *Android* users: you will also need to press ```"ACQUIRE WAKELOCK"``` in the Termux notification
 
 ---
 
@@ -54,6 +65,6 @@ To change the time at which the #MorningText should be sent just change line 11:
 > running raspberry pi my life has  
 > improved so much. Now my girlfriend  
 > thinks I'm perfect, while I'm sleeping  
-> peacefully and dreaming of waifus  
+> peacefully and dreaming of waifus.  
 >  
 > Luca, 19 y/o, London
