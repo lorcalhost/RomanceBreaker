@@ -11,7 +11,7 @@ customMsgs = ["Good morning beautiful", "I'm too lazy", "To write messages on my
 customTime = "4:20"
 
 #Getting username & pwd
-username = str(raw_input("Username: "))
+username = str(input("Username: "))
 passwrd = getpass()
 client = fbchat.Client(username, passwrd)
 
