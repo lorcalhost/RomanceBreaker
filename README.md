@@ -60,8 +60,8 @@ To change the time at which the #MorningText should be sent just change line 11:
   
 > My life has never been so great,  
 > since I added this script with 1337  
-> custom messages downloaded from the dark  
-> net in bulk to my 24/7  
+> custom messages downloaded from the  
+> dark net in bulk to my 24/7  
 > running raspberry pi my life has  
 > improved so much. Now my girlfriend  
 > thinks I'm perfect, while I'm sleeping  
