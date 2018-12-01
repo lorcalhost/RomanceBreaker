@@ -14,12 +14,12 @@ randTimeHour = 0
 randTimeMinute = 0
 
 #Getting username & pwd
-username = str(input("Username: "))
+username = str(raw_input("Username: "))
 passwrd = getpass()
 client = fbchat.Client(username, passwrd)
 
 #Getting recipient
-name = str(input("Username of your bae: "))
+name = str(raw_input("Username of your bae: ")
 friends = client.searchForUsers(name)
 bae = friends[0]
 
