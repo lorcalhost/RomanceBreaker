@@ -26,9 +26,9 @@ Simply ```cd RomanceBreaker``` and ```python3 RomanceBreaker.py```
 ---
 
 ## Custom messages setup
-I guess you also want to send custom messages, so here we go:
-On line 9 replace the messages in between ```" "``` with your own custom messages, you can also add more than three by adding after the ```"``` of the last message a comma and a new message, always in between ```" "```s
-If we want to add ```NewCustomMessage``` to the list below
+I guess you also want to send custom messages, so here we go:. 
+On line 9 replace the messages in between ```" "``` with your own custom messages, you can also add more than three by adding after the ```"``` of the last message a comma and a new message, always in between ```" "```s. 
+If we want to add ```NewCustomMessage``` to the list below. 
 ```python
 9 customMsgs = ["Good morning beautiful", "I'm too lazy", "To write messages on my own"]
 ```
