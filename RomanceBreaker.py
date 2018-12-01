@@ -18,15 +18,20 @@ client = fbchat.Client(username, passwrd)
 #Getting recipient
 name = str(raw_input("Username of your bae: "))
 friends = client.searchForUsers(name)
-friend = friends[0]
+bae = friends[0]
 
 def morningMessage():
     #Sending message
+    print("PASSED HERE")
     msg = random.choice(customMsgs)
-    sent = client.send(Message(msg), thread_id=friend.uid, thread_type=ThreadType.USER)
+    global client
+    global bae
+    sent = client.send(Message(msg), thread_id=bae.uid, thread_type=ThreadType.USER)
     if sent:
-        print("Message '" + msg + "' sent successfully!")
+        print("Message '" + msg + "' sent successfully!\nWaiting for next scheduled time...")
     else:
+        global username
+        global passwrd
         client = fbchat.Client(username, passwrd)
         morningMessage()
     return
