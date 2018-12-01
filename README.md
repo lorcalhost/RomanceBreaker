@@ -34,10 +34,10 @@ To change the time at which the #MorningText should be sent just change line 11:
 ```
 ## Comments of people who are enjoying the effects of Romance Breaker:  
   
-> My life has never been so great,
-> since I added this script to my
-> 24/7 running raspberry pi my life has
-> improved so much. Now my girlfriends
-> thinks I'm perfect, while I'm sleeping
-> peacefully and dreaming of waifus
+> My life has never been so great,  
+> since I added this script to my  
+> 24/7 running raspberry pi my life has  
+> improved so much. Now my girlfriend  
+> thinks I'm perfect, while I'm sleeping  
+> peacefully and dreaming of waifus  
 > Luca, 19 y/o, London
