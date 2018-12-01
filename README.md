@@ -25,7 +25,7 @@ As it was highly requested by the plebs without a raspberry pi:
 First download and install [Termux from the Google Play Store](https://play.google.com/store/apps/details?id=com.termux)  
 Then run the following commands:   
 ```sh
-pkg install python git
+pkg install python2 git
 pip install fbchat schedule
 git clone https://github.com/lorcalhost/RomanceBreaker.git
 ```
