@@ -1,5 +1,5 @@
-import schedule
 import time
+import datetime
 import fbchat
 import random
 from fbchat.models import *
@@ -7,8 +7,11 @@ from getpass import getpass
 
 #Add your own custom messages by putting your message between "s and using the same format below
 customMsgs = ["Good morning beautiful", "I'm too lazy", "To write messages on my own", "Custom message #4"]
-#Put your own custom hour here
-customTime = "4:20"
+#Put your own custom time interval here, make sure the hour is always two digits
+customTimeInterval = ["04:20", "16:20"]
+
+randTimeHour = 0
+randTimeMinute = 0
 
 #Getting username & pwd
 username = str(input("Username: "))
@@ -36,8 +39,24 @@ def morningMessage():
         morningMessage()
     return
 
-schedule.every().day.at(customTime).do(morningMessage)
+def newRandTime():
+    global customTimeInterval
+    global randTimeHour
+    global randTimeMinute
+    randTimeHour = random.randint(int(customTimeInterval[0][0:2]), int(customTimeInterval[1][0:2]))
+    if randTimeHour == int(customTimeInterval[1][0:2]):
+        randTimeMinute = random.randint(0, int(customTimeInterval[1][3:5]))
+    elif randTimeHour == int(customTimeInterval[0][0:2]):
+        randTimeMinute = random.randint(int(customTimeInterval[1][3:5]), 59)
+    else:
+        randTimeMinute = random.randint(0, 59)
+    
+    return
+
+newRandTime()
 
 while True:
-    schedule.run_pending()
+    if datetime.datetime.today().hour == randTimeHour and datetime.datetime.today().minute == randTimeMinute:
+        morningMessage()
+        newRandTime()
     time.sleep(60) #Wait one minute to check if it's #morningtime
