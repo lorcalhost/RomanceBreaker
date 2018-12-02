@@ -43,19 +43,19 @@ def newRandTime():
     global randTimeHour
     global randTimeMinute
     randTimeHour = random.randint(int(customTimeInterval[0][0:2]), int(customTimeInterval[1][0:2]))
-    if randTimeHour == int(customTimeInterval[1][0:2]):
+    if int(randTimeHour) == int(customTimeInterval[1][0:2]):
         randTimeMinute = random.randint(0, int(customTimeInterval[1][3:5]))
-    elif randTimeHour == int(customTimeInterval[0][0:2]):
+    elif int(randTimeHour) == int(customTimeInterval[0][0:2]):
         randTimeMinute = random.randint(int(customTimeInterval[1][3:5]), 59)
     else:
         randTimeMinute = random.randint(0, 59)
-    print("I'll send a message at " + str(randTimeHour) + ":" + str(randTimeMinute) + "...")
+    print("I'll send a message at " + str(randTimeHour).zfill(2) + ":" + str(randTimeMinute).zfill(2) + "...")
     return
 
 newRandTime()
 
 while True:
-    if int(datetime.datetime.today().hour) == randTimeHour and int(datetime.datetime.today().minute) == randTimeMinute:
+    if int(datetime.datetime.today().hour) == int(randTimeHour) and int(datetime.datetime.today().minute) == int(randTimeMinute):
         morningMessage()
         newRandTime()
     time.sleep(60) #Wait one minute to check if it's #morningtime
