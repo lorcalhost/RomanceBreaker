@@ -54,7 +54,8 @@ sudo pip install selenium bs4
 Also don't forget to ```git clone https://github.com/lorcalhost/RomanceBreaker.git```
 ### How to run
 Simply ```cd RomanceBreaker``` and ```python WA-RomanceBreaker.py```  
-After you enter the name of your *bae* WhatsApp web will open, scan the QR code on the website 
+After you enter the name of your *bae* WhatsApp web will open, scan the QR code on the website using the WhatsApp application:  
+Launch WhatsApp on your phone and access the settings menu by clicking the three dots at the top right, then choose WhatsApp Web and scan. 
 
 ---
 
