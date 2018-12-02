@@ -1,7 +1,7 @@
 # Romance Breaker
-##### "Is your girlfriend/boyfriend complaining that you wake up too late every morning or that you are not romantic enough but of course you're too lazy to change? I have a solution for you."
-
-Romance Breaker is a small python script which sends a custom morning message from a list to your significant other every morning at a given time on Facebook Messenger, now doesn't this sound great already?
+##### "Is your girlfriend/boyfriend complaining that you wake up too late every morning or that you are not romantic enough but of course you're too lazy to change? I have a solution for you."  
+  
+Introducing Romance Breaker, a small python script which sends a custom morning message from a list to your significant other every morning at a given time range on Facebook Messenger or WhatsApp, now doesn't this sound great already?
 
 ### Most loved features:
   - You can still be lazy
@@ -10,8 +10,8 @@ Romance Breaker is a small python script which sends a custom morning message fr
   - Magic
 
 ---
-
-# Installation on linux
+# Facebook Messenger:
+### Installation on linux
 
 Romance breaker relies on a few things, here is what to do to get them:
 ```sh
@@ -20,7 +20,7 @@ sudo pip install fbchat bs4
 ```
 Also don't forget to ```git clone https://github.com/lorcalhost/RomanceBreaker.git```
 
-# Installation on Android 
+### Installation on Android 
 As it was highly requested by the plebs without a raspberry pi:
 First download and install [Termux from the Google Play Store](https://play.google.com/store/apps/details?id=com.termux)  
 Then run the following commands:   
@@ -33,7 +33,7 @@ git clone https://github.com/lorcalhost/RomanceBreaker.git
 ```
 Please note that every time you restart your device, you will have to re run the commands in the *How to run* section
 
-# How to run
+### How to run
 ###### Linux:
 Simply ```cd RomanceBreaker``` and ```python RomanceBreaker.py```  
 ###### Android:
@@ -43,7 +43,23 @@ For *Android* users: you will also need to press ```"ACQUIRE WAKELOCK"``` in the
 
 ---
 
-## Custom messages setup
+# WhatsApp
+### Installation on linux
+
+Romance breaker relies on a few things, here is what to do to get them:
+```sh
+sudo apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev
+sudo pip install selenium bs4
+```
+Also don't forget to ```git clone https://github.com/lorcalhost/RomanceBreaker.git```
+### How to run
+Simply ```cd RomanceBreaker``` and ```python WA-RomanceBreaker.py```  
+After you enter the name of your *bae* WhatsApp web will open, scan the QR code on the website 
+
+---
+
+
+# Custom messages setup
 ###### Android Users
 Android users may want to edit the file with their preferred text editing app as the file will be in the Downloads folder of their devices  
   
@@ -57,11 +73,12 @@ We just need to edit it like this:
 ```python
 9 customMsgs = ["Good morning beautiful", "I'm too lazy", "To write messages on my own", "NewCustomMessage"]
 ```
-## Custom time setup
-To change the time at which the #MorningText should be sent just change line 11 with your custom interval:
+# Custom time range setup
+To change the time range at which the #MorningText should be sent just change line 11 with your custom range:
 ```python
 customTimeInterval = ["04:20", "16:20"]
 ```
+Make sure hour is always two digits
 
 
 ---
@@ -76,5 +93,6 @@ customTimeInterval = ["04:20", "16:20"]
 > improved so much. Now my girlfriend  
 > thinks I'm perfect, while I'm sleeping  
 > peacefully and dreaming of waifus.  
->  
-> Luca, 19 y/o, London
+Luca, 19 y/o, London  
+---
+###### This program was inspired by a real life critique, [@PreslavaKuzova](https://github.com/PreslavaKuzova)
