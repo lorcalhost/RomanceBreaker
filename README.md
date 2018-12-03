@@ -27,8 +27,8 @@ Then run the following commands:
 ```termux-setup-storage``` and allow storage access  
 ```sh
 cd storage/downloads 
-pkg install python2 git
-pip2 install fbchat requests bs4 enum
+pkg install python git
+pip install fbchat requests bs4 enum
 git clone https://github.com/lorcalhost/RomanceBreaker.git
 ```
 Please note that every time you restart your device, you will have to re run the commands in the *How to run* section
@@ -37,7 +37,7 @@ Please note that every time you restart your device, you will have to re run the
 ###### Linux:
 Simply ```cd RomanceBreaker``` and ```python RomanceBreaker.py```  
 ###### Android:
-Simply ```cd storage/downloads/RomanceBreaker``` and ```python2 RomanceBreaker.py```  
+Simply ```cd storage/downloads/RomanceBreaker``` and ```python RomanceBreaker.py```  
 
 For *Android* users: you will also need to press ```"ACQUIRE WAKELOCK"``` in the Termux notification to enable the script to run in the background without the process being killed
 
