@@ -17,7 +17,7 @@ randTimeHour = 0
 randTimeMinute = 0
 
 #Getting username & pwd
-bae = str(raw_input("Name of your bae: "))
+bae = nput("Name of your bae: ")
 bae = str('"' + bae + '"')
 print("A popup view of WhatsApp web will now open,\nScan the QR code in the page via your app\nDon't close the popup")
 time.sleep(5)
