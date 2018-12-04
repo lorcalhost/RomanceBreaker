@@ -65,17 +65,17 @@ Launch WhatsApp on your phone and access the settings menu by clicking the three
 Android users may want to edit the file with their preferred text editing app as the file will be in the Downloads folder of their devices  
   
 I guess you also want to send custom messages, so here we go: 
-On line 9 *(12 for WhatsApp)* replace the messages in between ```" "``` with your own custom messages, you can also add more than three by adding after the ```"``` of the last message a comma and a new message, always in between ```" "```s. 
+On line 10 *(14 for WhatsApp)* replace the messages in between ```" "``` with your own custom messages, you can also add more than three by adding after the ```"``` of the last message a comma and a new message, always in between ```" "```s. 
 If we want to add ```NewCustomMessage``` to the list below. 
 ```python
-9 customMsgs = ["Good morning beautiful", "I'm too lazy", "To write messages on my own"]
+customMsgs = ["Good morning beautiful", "I'm too lazy", "To write messages on my own"]
 ```
 We just need to edit it like this:
 ```python
-9 customMsgs = ["Good morning beautiful", "I'm too lazy", "To write messages on my own", "NewCustomMessage"]
+customMsgs = ["Good morning beautiful", "I'm too lazy", "To write messages on my own", "NewCustomMessage"]
 ```
 # Custom time range setup
-To change the time range at which the #MorningText should be sent just change line 11 *(14 for WhatsApp)* with your custom range:
+To change the time range at which the #MorningText should be sent just change line 12 *(16 for WhatsApp)* with your custom range:
 ```python
 customTimeInterval = ["04:20", "16:20"]
 ```
