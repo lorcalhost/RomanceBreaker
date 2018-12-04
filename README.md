@@ -16,7 +16,7 @@ Introducing *Romance Breaker*, a small python script which sends a custom mornin
 Romance breaker relies on a few things, here is what to do to get them:
 ```sh
 sudo apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev
-sudo pip install fbchat bs4
+sudo pip install fbchat bs4 
 ```
 Also don't forget to ```git clone https://github.com/lorcalhost/RomanceBreaker.git```
 
@@ -48,8 +48,8 @@ For *Android* users: you will also need to press ```"ACQUIRE WAKELOCK"``` in the
 
 Romance breaker relies on a few things, here is what to do to get them:
 ```sh
-sudo apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev
-sudo pip install selenium bs4
+sudo apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev xclip
+sudo pip install selenium bs4 pyperclip
 ```
 Also don't forget to ```git clone https://github.com/lorcalhost/RomanceBreaker.git```
 ### How to run
