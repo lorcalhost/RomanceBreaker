@@ -20,7 +20,6 @@ randTimeMinute = 0
 
 #Getting username & pwd
 bae = input("Name of your bae: ")
-bae = str('"' + bae + '"')
 print("A popup view of WhatsApp web will now open,\nScan the QR code in the page via your app\nDon't close the popup")
 time.sleep(5)
 
@@ -33,16 +32,25 @@ def morningMessage():
     global driver
     global bae
     msg = random.choice(customMsgs)
-    pyperclip.copy(msg) #Copies random message to clipboard
+    baestr = str('"' + bae + '"')
 
     #Some Selenium stuff, don't bother
-    x_arg = '//span[contains(@title,' + bae + ')]'
+    pyperclip.copy(bae)
+    searchbar = driver.find_elements_by_xpath('//*[@id="side"]/div[1]/div/label/input')[0]
+    searchbar.click() #Click on searchbar
+    searchbar.send_keys(Keys.CONTROL, 'v') #Search for contact for more speed
+    x_arg = '//span[contains(@title,' + baestr + ')]'
     group_title = wait.until(EC.presence_of_element_located((By.XPATH, x_arg)))
     group_title.click()
+    pyperclip.copy(msg) #Copies random message to clipboard
     message = driver.find_elements_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')[0]
     message.send_keys(Keys.CONTROL, 'v') #Sends message from clipboard
     sendbutton = driver.find_elements_by_xpath('//*[@id="main"]/footer/div[1]/div[3]/button')[0]
     sendbutton.click() #Presses send button
+    searchbar.click() #Click on searchbar
+    searchbar.send_keys(Keys.CONTROL, 'a') #Select all
+    searchbar.send_keys(Keys.DELETE) #Delete searchbar content
+    print("Message " + msg + " successfully sent to" + bae)
     return
 
 def newRandTime():
