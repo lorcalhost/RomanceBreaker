@@ -11,21 +11,34 @@ Introducing *Romance Breaker*, a small python script which sends a custom mornin
 
 ---
 # Facebook Messenger:
-### Installation on linux
+### Installation on PC
 
 Romance breaker relies on a few things, here is what to do to get them:
-```sh
+
+- Python3 is needed get it from [here](https://www.python.org/downloads/)
+###### For Linux:
+Run these commands in your preferred terminal application  
+```shell=
 sudo apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev
-sudo pip install fbchat bs4 
+pip install fbchat bs4 
+git clone https://github.com/lorcalhost/RomanceBreaker.git
 ```
-Also don't forget to ```git clone https://github.com/lorcalhost/RomanceBreaker.git```
+###### For Windows
+- Also install git from [here](https://git-scm.com/download/win)
+- Make sure you run all the commands from git
+```shell=
+sudo pip install fbchat bs4 
+git clone https://github.com/lorcalhost/RomanceBreaker.git
+```
 
 ### Installation on Android 
 As it was highly requested by the plebs without a raspberry pi:
-First download and install [Termux from the Google Play Store](https://play.google.com/store/apps/details?id=com.termux)  
-Then run the following commands:   
+From *Android* you will only be able to run the Facebook Messenger version, here are the instructions:
+- First download and install [Termux from the Google Play Store](https://play.google.com/store/apps/details?id=com.termux)  
+- Then run the following commands:
+
 ```termux-setup-storage``` and allow storage access  
-```sh
+```shell=
 cd storage/downloads 
 pkg install python git
 pip install fbchat requests bs4 enum
@@ -43,44 +56,75 @@ For *Android* users: you will also need to press ```"ACQUIRE WAKELOCK"``` in the
 
 ---
 
-# WhatsApp
-### Installation on linux
+# WhatsApp and SMS
+### Installation on PC
 
 Romance breaker relies on a few things, here is what to do to get them:
-```sh
+- Python3 is needed get it from [here](https://www.python.org/downloads/)
+- Chrome Driver get it from [here](https://chromedriver.storage.googleapis.com/index.html?path=2.44/) and unzip in the ```RomanceBreaker``` folder
+- If you want to setup SMS you will need to have [Google messages](https://play.google.com/store/apps/details?id=com.google.android.apps.messaging) on your Android phone
+
+###### For Linux:
+Run these commands in your preferred terminal application  
+```shell=
 sudo apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev xclip
 sudo pip install selenium bs4 pyperclip
+git clone https://github.com/lorcalhost/RomanceBreaker.git
 ```
-Also don't forget to ```git clone https://github.com/lorcalhost/RomanceBreaker.git```
-### How to run
-Simply ```cd RomanceBreaker``` and ```python WA-RomanceBreaker.py```  
-After you enter the name of your *bae* WhatsApp web will open, scan the QR code on the website using the WhatsApp application:  
-Launch WhatsApp on your phone and access the settings menu by clicking the three dots at the top right, then choose WhatsApp Web and scan. 
 
+###### For Windows
+- Also install git from [here](https://git-scm.com/download/win)
+- Make sure you run all the commands from git
+```shell=
+sudo pip install selenium bs4 pyperclip
+git clone https://github.com/lorcalhost/RomanceBreaker.git
+```
+
+##### SMS mode is strongly not suggested, it's slow and buggy due to Google Messages nature
 ---
+# Usage
+First go to the program directory by typing in the terminal:
+- From **PC:**  ```cd RomanceBreaker``` 
+- From **Android:** ```cd storage/downloads/RomanceBreaker```  
 
+Then run the script with the according argument:  
+- For **WhatsApp version**: ```python romanceBreaker.py -w``` or ```python romanceBreaker.py whatsapp``` 
+- For **Messenger version**: ```python romanceBreaker.py -m``` or ```python romanceBreaker.py messenger``` 
+- For **SMS version**: ```python romanceBreaker.py -s``` or ```python romanceBreaker.py sms``` 
 
-# Custom messages setup
-###### Android Users
-Android users may want to edit the file with their preferred text editing app as the file will be in the Downloads folder of their devices  
+Also other arguments exist like:
+- To open **user guide**: ```python romanceBreaker.py -h``` or ```python romanceBreaker.py help```  or ```python romanceBreaker.py man``` 
+- To **update** the script: ```python romanceBreaker.py update```
+
+**For *Android* users:** you will also need to press ```"ACQUIRE WAKELOCK"``` in the Termux notification to enable the script to run in the background withoutthe process being killed  
+***Android right now only supports Facebook Messenger mode***
+Simply ```cd RomanceBreaker``` and ```python WA-RomanceBreaker.py```  
+
+# Custom messages/times setup
+***Android** users may want to edit the ```config.py``` file with their preferred text editing app as the file will be in the Downloads folder of their devices*   
   
-I guess you also want to send custom messages, so here we go: 
-On line 10 *(14 for WhatsApp)* replace the messages in between ```" "``` with your own custom messages, you can also add more than three by adding after the ```"``` of the last message a comma and a new message, always in between ```" "```s. 
-If we want to add ```NewCustomMessage``` to the list below. 
+Simply open the ```config.py``` file with your preferred text editing app and follow the instructions there, I think I made them clear enough   
+###### If you still cannot understand from the config.py file..
+## Custom messages:
+
+
+Replace the messages in between ```" "``` with your own custom messages, you can also add more custom messages by adding after the ```"``` of the last message a comma and a new message, always in between ```" "```s. 
+If we want to add ```New custom message``` to the list below 
 ```python
-customMsgs = ["Good morning beautiful", "I'm too lazy", "To write messages on my own"]
+custom_morning_messages = ["Good morning beautiful ♥♥♥"]
 ```
 We just need to edit it like this:
 ```python
-customMsgs = ["Good morning beautiful", "I'm too lazy", "To write messages on my own", "NewCustomMessage"]
+custom_morning_messages = ["Good morning beautiful ♥♥♥", "New custom message"]
 ```
-# Custom time range setup
-To change the time range at which the #MorningText should be sent just change line 12 *(16 for WhatsApp)* with your custom range:
-```python
-customTimeInterval = ["04:20", "16:20"]
-```
-Make sure hour is always two digits
+## Custom time range: 
 
+If we want to change the time range we have to edit this line:
+```python
+custom_time_interval = ["04:20", "16:20"]
+```
+
+Make sure the **hour** is always **two digits**
 
 ---
 
