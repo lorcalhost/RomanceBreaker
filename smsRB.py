@@ -31,7 +31,7 @@ def morningMessage():
         message = driver.find_elements_by_xpath('//*[@id="yDmH0d"]/c-wiz/div/div/div/div/div/div[2]/div/div[3]/div/div/div[3]/div[2]/div[1]/div/div[2]/div/div[1]')[0]
         message.send_keys(Keys.CONTROL, 'v')
         message.send_keys(Keys.ENTER)
-        print("Message " + msg + " successfully sent to" + bae)
+        print("Message {} successfully sent to {}" .format(msg, bae))
     except:
         print("Problem sending, retrying...")
         morningMessage()
@@ -48,7 +48,7 @@ def newRandTime():
         randTimeMinute = random.randint(int(config.custom_time_interval[1][3:5]), 59)
     else:
         randTimeMinute = random.randint(0, 59)
-    print("I'll send a message at " + str(randTimeHour).zfill(2) + ":" + str(randTimeMinute).zfill(2) + "...")
+    print("I'll send a message at {}:{}...".format(randTimeHour.zfill(2), randTimeMinute.zfill(2)))
     return
 
 #Getting username & pwd

@@ -27,15 +27,17 @@ def morningMessage():
         x_arg = '//span[contains(@title,' + baestr + ')]'
         group_title = wait.until(EC.presence_of_element_located((By.XPATH, x_arg)))
         group_title.click()
+        time.sleep(0.1)
         pyperclip.copy(msg) #Copies random message to clipboard
         message = driver.find_elements_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')[0]
         message.send_keys(Keys.CONTROL, 'v') #Sends message from clipboard
+        time.sleep(0.1)
         sendbutton = driver.find_elements_by_xpath('//*[@id="main"]/footer/div[1]/div[3]/button')[0]
         sendbutton.click() #Presses send button
         searchbar.click() #Click on searchbar
         searchbar.send_keys(Keys.CONTROL, 'a') #Select all
         searchbar.send_keys(Keys.DELETE) #Delete searchbar content
-        print("Message " + msg + " successfully sent to" + bae)
+        print("Message {} successfully sent to {}" .format(msg, bae))
     except:
         print("Problem sending, retrying...")
         morningMessage()
@@ -52,7 +54,7 @@ def newRandTime():
         randTimeMinute = random.randint(int(config.custom_time_interval[1][3:5]), 59)
     else:
         randTimeMinute = random.randint(0, 59)
-    print("I'll send a message at " + str(randTimeHour).zfill(2) + ":" + str(randTimeMinute).zfill(2) + "...")
+    print("I'll send a message at {}:{}..." .format(randTimeHour.zfill(2), randTimeMinute.zfill(2)))
     return
 
 #Getting username & pwd

@@ -3,7 +3,7 @@ import time
 import datetime
 import fbchat
 import random
-from fbchat.models import *
+from fbchat.models import ThreadType, Message
 from getpass import getpass
 import config
 
@@ -27,7 +27,7 @@ def morningMessage():
     global bae
     sent = client.send(Message(msg), thread_id=bae.uid, thread_type=ThreadType.USER)
     if sent:
-        print("Message '" + msg + "' sent successfully!\nWaiting for next scheduled time...")
+        print("Message '{}' sent successfully!\nWaiting for next scheduled time..." .format(msg))
     else:
         global username
         global passwrd
@@ -45,7 +45,7 @@ def newRandTime():
         randTimeMinute = random.randint(int(config.custom_time_interval[1][3:5]), 59)
     else:
         randTimeMinute = random.randint(0, 59)
-    print("I'll send a message at " + str(randTimeHour).zfill(2) + ":" + str(randTimeMinute).zfill(2) + "...")
+    print("I'll send a message at {}:{}..." .format(randTimeHour.zfill(2), randTimeMinute.zfill(2)))
     return
 
 newRandTime()
