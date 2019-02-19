@@ -5,10 +5,11 @@ import fbchat
 import random
 from fbchat.models import ThreadType, Message
 from getpass import getpass
+import os,sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import config
+import randomTime
 
-randTimeHour = 0
-randTimeMinute = 0
 
 #Getting username & pwd
 username = input("Username: ")
@@ -35,23 +36,11 @@ def morningMessage():
         morningMessage()
     return
 
-def newRandTime():
-    global randTimeHour
-    global randTimeMinute
-    randTimeHour = random.randint(int(config.custom_time_interval[0][0:2]), int(config.custom_time_interval[1][0:2]))
-    if int(randTimeHour) == int(config.custom_time_interval[1][0:2]):
-        randTimeMinute = random.randint(0, int(config.custom_time_interval[1][3:5]))
-    elif int(randTimeHour) == int(config.custom_time_interval[0][0:2]):
-        randTimeMinute = random.randint(int(config.custom_time_interval[1][3:5]), 59)
-    else:
-        randTimeMinute = random.randint(0, 59)
-    print("I'll send a message at {}:{}..." .format(randTimeHour.zfill(2), randTimeMinute.zfill(2)))
-    return
-
-newRandTime()
+randTimeHour, randTimeMinute = randomTime.new(config.custom_time_interval)
 
 while True:
     if int(datetime.datetime.today().hour) == int(randTimeHour) and int(datetime.datetime.today().minute) == int(randTimeMinute):
         morningMessage()
-        newRandTime()
+        randTimeHour, randTimeMinute = randomTime.new(
+            config.custom_time_interval)
     time.sleep(60) #Wait one minute to check if it's #morningtime

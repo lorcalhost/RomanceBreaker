@@ -19,8 +19,8 @@ Romance breaker relies on a few things, here is what to do to get them:
 ###### For Linux:
 Run these commands in your preferred terminal application  
 ```shell=
-sudo apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev
-pip install fbchat bs4 
+sudo apt-get install python3-pip
+pip3 install fbchat bs4 
 git clone https://github.com/lorcalhost/RomanceBreaker.git
 ```
 ###### For Windows
@@ -40,19 +40,60 @@ From *Android* you will only be able to run the Facebook Messenger version, here
 ```termux-setup-storage``` and allow storage access  
 ```shell=
 cd storage/downloads 
-pkg install python git
-pip install fbchat requests bs4 enum
+pkg install python3 git
+pip3 install fbchat requests bs4 enum
 git clone https://github.com/lorcalhost/RomanceBreaker.git
 ```
 Please note that every time you restart your device, you will have to re run the commands in the *How to run* section
 
-### How to run
-###### Linux:
-Simply ```cd RomanceBreaker``` and ```python RomanceBreaker.py```  
-###### Android:
-Simply ```cd storage/downloads/RomanceBreaker``` and ```python RomanceBreaker.py```  
+For *Android* users: you will also need to press ```"ACQUIRE WAKELOCK"``` in the Termux notification to enable the script to run in the background without the process being killed
+
+---
+# Telegram
+### Installation on PC
+
+Romance breaker relies on a few things, here is what to do to get them:
+
+- Python3 is needed get it from [here](https://www.python.org/downloads/)
+###### For Linux:
+Run these commands in your preferred terminal application  
+```shell=
+sudo apt-get install python3-pip
+pip3 install telethon bs4 
+git clone https://github.com/lorcalhost/RomanceBreaker.git
+```
+###### For Windows
+- Also install git from [here](https://git-scm.com/download/win)
+- Make sure you run all the commands from git
+```shell=
+sudo pip install telethon bs4 
+git clone https://github.com/lorcalhost/RomanceBreaker.git
+```
+
+### Installation on Android 
+As it was highly requested by the plebs without a raspberry pi:
+From *Android* you will only be able to run the Facebook Messenger version, here are the instructions:
+- First download and install [Termux from the Google Play Store](https://play.google.com/store/apps/details?id=com.termux)  
+- Then run the following commands:
+
+```termux-setup-storage``` and allow storage access  
+```shell=
+cd storage/downloads 
+pkg install python3 git
+pip3 install telethon requests bs4 enum
+git clone https://github.com/lorcalhost/RomanceBreaker.git
+```
+Please note that every time you restart your device, you will have to re run the commands in the *How to run* section
 
 For *Android* users: you will also need to press ```"ACQUIRE WAKELOCK"``` in the Termux notification to enable the script to run in the background without the process being killed
+
+To make the telegram script work you'll also need to update the `config.py` file with your login info:
+- Log in to your Telegram core: https://my.telegram.org.
+- Go to ‘API development tools’ and fill out the form.
+- Create an app
+- You will get the `api_id` and `api_hash` parameters required for user authorization (to put in the config.py file)  
+
+Password only required if you have two-step verification enabled
 
 ---
 
@@ -76,7 +117,7 @@ git clone https://github.com/lorcalhost/RomanceBreaker.git
 - Also install git from [here](https://git-scm.com/download/win)
 - Make sure you run all the commands from git
 ```shell=
-sudo pip install selenium bs4 pyperclip
+pip install selenium bs4 pyperclip
 git clone https://github.com/lorcalhost/RomanceBreaker.git
 ```
 

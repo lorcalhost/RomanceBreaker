@@ -9,7 +9,10 @@ import sys
 import datetime
 import random
 import pyperclip
+import os,sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import config
+import randomTime
 
 def morningMessage():
     #Sending message
@@ -44,34 +47,21 @@ def morningMessage():
         pass
     return
 
-def newRandTime():
-    global randTimeHour
-    global randTimeMinute
-    randTimeHour = random.randint(int(config.custom_time_interval[0][0:2]), int(config.custom_time_interval[1][0:2]))
-    if int(randTimeHour) == int(config.custom_time_interval[1][0:2]):
-        randTimeMinute = random.randint(0, int(config.custom_time_interval[1][3:5]))
-    elif int(randTimeHour) == int(config.custom_time_interval[0][0:2]):
-        randTimeMinute = random.randint(int(config.custom_time_interval[1][3:5]), 59)
-    else:
-        randTimeMinute = random.randint(0, 59)
-    print("I'll send a message at {}:{}..." .format(randTimeHour.zfill(2), randTimeMinute.zfill(2)))
-    return
-
 #Getting username & pwd
 bae = input("Name of your bae: ")
 print("A popup view of WhatsApp web will now open,\nScan the QR code in the page via your app\nDon't close the popup")
 time.sleep(5)
 
-driver = webdriver.Chrome('./chromedriver')
+driver = webdriver.Chrome(
+    '{}/chromedriver'.format(os.path.dirname(os.path.realpath('__file__'))))
 driver.get("https://web.whatsapp.com/")
 wait = WebDriverWait(driver, 600)
 
-randTimeHour = 0
-randTimeMinute = 0
-newRandTime()
+randTimeHour, randTimeMinute = randomTime.new(config.custom_time_interval)
 
 while True:
     if int(datetime.datetime.today().hour) == int(randTimeHour) and int(datetime.datetime.today().minute) == int(randTimeMinute):
         morningMessage()
-        newRandTime()
+        randTimeHour, randTimeMinute = randomTime.new(
+            config.custom_time_interval)
     time.sleep(60) #Wait one minute to check if it's #morningtime
