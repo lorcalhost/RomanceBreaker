@@ -9,6 +9,11 @@ Introducing *Romance Breaker*, a small python script which sends a custom mornin
   - Relationship improvement (I don't take any responsibility if Romance Breaker® doesn't improve relationship status)
   - Magic
 
+### [NEW]: Windows users can now use the graphical version of RomanceBreaker:  
+
+Download [here](https://github.com/lorcalhost/RomanceBreaker/releases/tag/1.1)
+Source code [here](https://github.com/lorcalhost/RomanceBreaker-GUI)
+
 ---
 # Facebook Messenger:
 ### Installation on PC
