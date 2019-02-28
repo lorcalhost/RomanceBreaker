@@ -11,7 +11,7 @@ Introducing *Romance Breaker*, a small python script which sends a custom mornin
 
 ### [NEW]: Windows users can now use the graphical version of RomanceBreaker:  
 
-Download [here](https://github.com/lorcalhost/RomanceBreaker/releases/tag/1.1)
+Download [here](https://github.com/lorcalhost/RomanceBreaker/releases/tag/1.1)  
 Source code [here](https://github.com/lorcalhost/RomanceBreaker-GUI)
 
 ---
